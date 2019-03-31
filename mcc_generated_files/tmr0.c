@@ -61,8 +61,9 @@ void TMR0_Initialize(void)
 {
     // Set TMR0 to the options selected in the User Interface
 
-    // T0CS FOSC/4; T0CKPS 1:128; T0ASYNC not_synchronised; 
-    T0CON1 = 0x57;
+    // T0CS FOSC/4; T0CKPS 1:128; T0ASYNC not_synchronized; 
+    T0CON1 = 0x50; // 0x57 LED Blinks ~10x per second
+                   // 0x50 Keeps LED ON for measurements w/ multimeter
 
     // TMR0H 194; 
     TMR0H = 0xC2;
